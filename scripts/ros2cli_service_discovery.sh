@@ -9,5 +9,7 @@ echo "========================== killing add_two_ints_server"
 kill -SIGINT $(pidof add_two_ints_server)
 while pidof add_two_ints_server >/dev/null; do sleep 0.5; done
 
+sleep 20
+
 echo "========================== service list after kill"
 ros2 service list

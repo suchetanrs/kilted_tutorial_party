@@ -13,5 +13,7 @@ while pidof talker >/dev/null; do sleep 0.5; done
 kill -SIGINT $(pidof listener)
 while pidof listener >/dev/null; do sleep 0.5; done
 
+sleep 20
+
 echo "========================== topic list after kill"
 ros2 topic list
